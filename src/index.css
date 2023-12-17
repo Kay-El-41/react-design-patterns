@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home-btn {
+  @apply bg-slate-400 p-3 rounded-md text-white hover:brightness-95 active:brightness-75 shadow-sm w-1/2 text-center;
+}
+
+.quote {
+  @apply border-l-4 border-l-slate-500 pl-3;
+}
+
+.heading1 {
+  @apply text-2xl font-semibold py-3;
+}
+
+.heading2 {
+  @apply text-xl font-medium py-3;
+}
