@@ -6,3 +6,8 @@ export const HIGHER_ORDER_COMPONENTS = "/higher-order-components";
 export const CUSTOM_HOOKS_COMPONENTS = "/custom-hooks-components";
 export const FUNCTIONAL_PROGRAMMING_COMPONENTS =
   "/functional-programming-components";
+
+// Layout Components Paths
+export const SPLIT_SCREEN_PATTERN = "/layout-components/split-screen-pattern";
+export const LIST_DISPLAY_PATTERN = "/layout-components/displaying-lists";
+export const MODAL_PATTERN = "/layout-components/modal";

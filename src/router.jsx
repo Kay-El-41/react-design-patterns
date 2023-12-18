@@ -1,6 +1,9 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import App from "./App";
 import LayoutComponents from "./routes/LayoutComponents";
+import SplitScreenPattern from "./routes/SplitScreenPattern";
+import ListDisplay from "./routes/ListDisplay";
+import Modal from "./routes/Modal";
 
 const router = createBrowserRouter([
   {
@@ -14,16 +17,16 @@ const router = createBrowserRouter([
     children: [
       { path: "", element: <LayoutComponents /> },
       {
-        path: "screen-splitter",
-        element: <h1>Screen Split</h1>,
+        path: "split-screen-pattern",
+        element: <SplitScreenPattern />,
       },
       {
-        path: "lists",
-        element: <h1>Lists</h1>,
+        path: "displaying-lists",
+        element: <ListDisplay />,
       },
       {
         path: "modal",
-        element: <h1>Modal</h1>,
+        element: <Modal />,
       },
     ],
   },

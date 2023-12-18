@@ -1,5 +1,11 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
+import {
+  LIST_DISPLAY_PATTERN,
+  MODAL_PATTERN,
+  SPLIT_SCREEN_PATTERN,
+} from "../constants/path";
 
 const LayoutComponents = () => {
   return (
@@ -10,7 +16,7 @@ const LayoutComponents = () => {
         <h2 className="heading2">Purpose</h2>
         <p className="quote">
           The Layout Components focus on organizing other components within a
-          web page
+          web page.
         </p>
         <h2 className="heading2">Concept</h2>
         <p className="quote">
@@ -19,9 +25,15 @@ const LayoutComponents = () => {
         </p>
         <h2 className="heading2">Design Patterns</h2>
         <div className="flex flex-col gap-3">
-          <button className="home-btn">Screen Split Component</button>
-          <button className="home-btn">Displaying Lists</button>
-          <button className="home-btn">Modals</button>
+          <Link to={SPLIT_SCREEN_PATTERN} className="home-btn">
+            Screen Split Component
+          </Link>
+          <Link to={LIST_DISPLAY_PATTERN} className="home-btn">
+            Displaying Lists
+          </Link>
+          <Link to={MODAL_PATTERN} className="home-btn">
+            Modals
+          </Link>
         </div>
       </main>
     </>
