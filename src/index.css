@@ -17,3 +17,13 @@
 .heading2 {
   @apply text-xl font-medium py-3;
 }
+
+/* Modal */
+.modal-background {
+  @apply absolute left-0 top-0 overflow-auto bg-black/30 w-full h-full;
+}
+
+.modal-content {
+  @apply my-[12%] mx-auto p-6 bg-yellow-50 w-1/2;
+}
+/* End Modal */
