@@ -4,6 +4,7 @@ import LayoutComponents from "./routes/LayoutComponents";
 import SplitScreenPattern from "./routes/SplitScreenPattern";
 import ListDisplay from "./routes/ListDisplay";
 import Modal from "./routes/Modal";
+import ContainerComponents from "./routes/ContainerComponents";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
     path: "/container-components",
     element: <Outlet />,
     children: [
-      { path: "", element: <h1>Hi</h1> },
+      { path: "", element: <ContainerComponents /> },
       {
         path: "path",
         element: <h1>Path</h1>,
