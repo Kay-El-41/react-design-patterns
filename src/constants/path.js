@@ -11,3 +11,7 @@ export const FUNCTIONAL_PROGRAMMING_COMPONENTS =
 export const SPLIT_SCREEN_PATTERN = "/layout-components/split-screen-pattern";
 export const LIST_DISPLAY_PATTERN = "/layout-components/displaying-lists";
 export const MODAL_PATTERN = "/layout-components/modal";
+
+// Container Components Paths
+export const SIMPLE_USER_CONTAINER_PATTERN =
+  "/container-components/simple-user-loader";

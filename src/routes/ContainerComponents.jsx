@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { SIMPLE_USER_CONTAINER_PATTERN } from "../constants/path";
 
 const ContainerComponents = () => {
   return (
@@ -27,10 +28,10 @@ const ContainerComponents = () => {
         </p>
         <h2 className="heading2">Design Patterns</h2>
         <div className="flex flex-col gap-3">
-          {/* <Link to={""} className="home-btn">
-            Screen Split Component
+          <Link to={SIMPLE_USER_CONTAINER_PATTERN} className="home-btn">
+            Simple User Data Loader
           </Link>
-          <Link to={""} className="home-btn">
+          {/* <Link to={""} className="home-btn">
             Displaying Lists
           </Link>
           <Link to={""} className="home-btn">

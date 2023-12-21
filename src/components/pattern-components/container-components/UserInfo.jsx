@@ -9,7 +9,7 @@ const UserInfo = ({ user }) => {
       <p>Country: {country}</p>
       <h2>Books</h2>
       <ul>
-        {books.map((book) => (
+        {books?.map((book) => (
           <li key={book}>{book}</li>
         ))}
       </ul>

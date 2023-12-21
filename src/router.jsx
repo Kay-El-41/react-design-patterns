@@ -5,6 +5,7 @@ import SplitScreenPattern from "./routes/SplitScreenPattern";
 import ListDisplay from "./routes/ListDisplay";
 import Modal from "./routes/Modal";
 import ContainerComponents from "./routes/ContainerComponents";
+import SimpleUserLoader from "./routes/SimpleUserLoader";
 
 const router = createBrowserRouter([
   {
@@ -38,8 +39,8 @@ const router = createBrowserRouter([
     children: [
       { path: "", element: <ContainerComponents /> },
       {
-        path: "path",
-        element: <h1>Path</h1>,
+        path: "simple-user-loader",
+        element: <SimpleUserLoader />,
       },
     ],
   },
