@@ -1,11 +1,15 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import App from "./App";
 import LayoutComponents from "./routes/LayoutComponents";
-import SplitScreenPattern from "./routes/SplitScreenPattern";
-import ListDisplay from "./routes/ListDisplay";
-import Modal from "./routes/Modal";
 import ContainerComponents from "./routes/ContainerComponents";
-import SimpleUserLoader from "./routes/SimpleUserLoader";
+import SplitScreenPattern from "./routes/layout-routes/SplitScreenPattern";
+import ListDisplay from "./routes/layout-routes/ListDisplay";
+import Modal from "./routes/layout-routes/Modal";
+import CCurrentUserLoader from "./routes/container-routes/CCurrentUserLoader";
+import CUserLoader from "./routes/container-routes/CUserLoader";
+import CResourceLoader from "./routes/container-routes/CResourceLoader";
+import CDataSource from "./routes/container-routes/CDataSource";
+import CLocalStorage from "./routes/container-routes/CLocalStorage";
 
 const router = createBrowserRouter([
   {
@@ -39,8 +43,24 @@ const router = createBrowserRouter([
     children: [
       { path: "", element: <ContainerComponents /> },
       {
-        path: "simple-user-loader",
-        element: <SimpleUserLoader />,
+        path: "current-user-loader",
+        element: <CCurrentUserLoader />,
+      },
+      {
+        path: "user-loader",
+        element: <CUserLoader />,
+      },
+      {
+        path: "resource-loader",
+        element: <CResourceLoader />,
+      },
+      {
+        path: "data-source-loader",
+        element: <CDataSource />,
+      },
+      {
+        path: "local-storage-loader",
+        element: <CLocalStorage />,
       },
     ],
   },

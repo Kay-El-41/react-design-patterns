@@ -1,7 +1,13 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
-import { SIMPLE_USER_CONTAINER_PATTERN } from "../constants/path";
+import {
+  CURRENT_USER_CONTAINER_PATTERN,
+  DATA_SOURCE_CONTAINER_PATTERN,
+  LOCAL_STORAGE_CONTAINER_PATTERN,
+  RESOURCE_CONTAINER_PATTERN,
+  USER_CONTAINER_PATTERN,
+} from "../constants/path";
 
 const ContainerComponents = () => {
   return (
@@ -28,15 +34,21 @@ const ContainerComponents = () => {
         </p>
         <h2 className="heading2">Design Patterns</h2>
         <div className="flex flex-col gap-3">
-          <Link to={SIMPLE_USER_CONTAINER_PATTERN} className="home-btn">
-            Simple User Data Loader
+          <Link to={CURRENT_USER_CONTAINER_PATTERN} className="home-btn">
+            Current User Data Loader
           </Link>
-          {/* <Link to={""} className="home-btn">
-            Displaying Lists
+          <Link to={USER_CONTAINER_PATTERN} className="home-btn">
+            User Data Loader
+          </Link>{" "}
+          <Link to={RESOURCE_CONTAINER_PATTERN} className="home-btn">
+            Resource Loader
           </Link>
-          <Link to={""} className="home-btn">
-            Modals
-          </Link> */}
+          <Link to={DATA_SOURCE_CONTAINER_PATTERN} className="home-btn">
+            Data Source Loader
+          </Link>
+          <Link to={LOCAL_STORAGE_CONTAINER_PATTERN} className="home-btn">
+            Local Storage Source Loader
+          </Link>
         </div>
       </main>
     </>

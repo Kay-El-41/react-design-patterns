@@ -1,5 +1,5 @@
 import React from "react";
-import SplitScreen from "../components/pattern-components/layout-components/split-screen/SplitScreen";
+import SplitScreen from "../../components/pattern-components/layout-components/split-screen/SplitScreen";
 
 const LeftSideComponent = () => {
   return (

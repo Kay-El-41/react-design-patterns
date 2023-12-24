@@ -1,13 +1,13 @@
 import React from "react";
-import RegularList from "../components/pattern-components/layout-components/list-display/lists/RegularList";
-import { authors } from "../data/authors";
-import SmallAuthorListItems from "../components/pattern-components/layout-components/list-display/authors/SmallListItems";
-import LargeAuthorListItems from "../components/pattern-components/layout-components/list-display/authors/LargeListItems";
-import SmallBookListItem from "../components/pattern-components/layout-components/list-display/books/SmallListItems";
-import LargeListItems from "../components/pattern-components/layout-components/list-display/books/LargeListItems";
-import { books } from "../data/books";
-import NumberedList from "../components/pattern-components/layout-components/list-display/lists/Numbered";
-import Navbar from "../components/Navbar";
+import RegularList from "../../components/pattern-components/layout-components/list-display/lists/RegularList";
+import { authors } from "../../data/authors";
+import SmallAuthorListItems from "../../components/pattern-components/layout-components/list-display/authors/SmallListItems";
+import LargeAuthorListItems from "../../components/pattern-components/layout-components/list-display/authors/LargeListItems";
+import SmallBookListItem from "../../components/pattern-components/layout-components/list-display/books/SmallListItems";
+import LargeListItems from "../../components/pattern-components/layout-components/list-display/books/LargeListItems";
+import { books } from "../../data/books";
+import NumberedList from "../../components/pattern-components/layout-components/list-display/lists/Numbered";
+import Navbar from "../../components/Navbar";
 
 const ListDisplay = () => {
   return (
