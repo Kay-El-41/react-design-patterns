@@ -3,6 +3,26 @@ import React from "react";
 import App from "./App";
 import lazyComponentLoader from "./utils/lazyComponentLoader";
 
+const HigherOrderComponents = lazyComponentLoader(
+  () => import("./routes/HigherOrderComponents")
+);
+
+const HBuildingForms = lazyComponentLoader(
+  () => import("./routes/higher-order-routes/HBuildingForms")
+);
+const HCheckingProps = lazyComponentLoader(
+  () => import("./routes/higher-order-routes/HCheckingProps")
+);
+const HDataLoading = lazyComponentLoader(
+  () => import("./routes/higher-order-routes/HDataLoading")
+);
+const HEnhancingHOC = lazyComponentLoader(
+  () => import("./routes/higher-order-routes/HEnhancingHOC")
+);
+const HUpdatingData = lazyComponentLoader(
+  () => import("./routes/higher-order-routes/HUpdatingData")
+);
+
 const LayoutComponents = lazyComponentLoader(
   () => import("./routes/LayoutComponents")
 );
@@ -149,10 +169,26 @@ const router = createBrowserRouter([
     path: "/higher-order-components",
     element: <Outlet />,
     children: [
-      { path: "", element: <h1>Hi</h1> },
+      { path: "", element: <HigherOrderComponents /> },
       {
-        path: "path",
-        element: <h1>Path</h1>,
+        path: "checking-props",
+        element: <HCheckingProps />,
+      },
+      {
+        path: "data-loading",
+        element: <HDataLoading />,
+      },
+      {
+        path: "updating-data",
+        element: <HUpdatingData />,
+      },
+      {
+        path: "building-forms",
+        element: <HBuildingForms />,
+      },
+      {
+        path: "enhancing-hoc",
+        element: <HEnhancingHOC />,
       },
     ],
   },

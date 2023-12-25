@@ -36,3 +36,13 @@ export const COLLECTING_DATA_COMPONENT_PATTERN =
   "/controlled-uncontrolled-components/collecting-data";
 export const CONTROLLED_FLOWS_COMPONENT_PATTERN =
   "/controlled-uncontrolled-components/controlled-flows";
+
+// Higher Order Components Paths
+export const CHECKING_PROPS_HOC_PATTERN =
+  "/higher-order-components/checking-props";
+export const DATA_LOADING_HOC_PATTERN = "/higher-order-components/data-loading";
+export const UPDATING_DATA_HOC_PATTERN =
+  "/higher-order-components/updating-data";
+export const BUILDING_FORMS_HOC_PATTERN =
+  "/higher-order-components/building-forms";
+export const ENHANCING_HOC_PATTERN = "/higher-order-components/enhancing-hoc";
