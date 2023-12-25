@@ -22,3 +22,17 @@ export const DATA_SOURCE_CONTAINER_PATTERN =
   "/container-components/data-source-loader";
 export const LOCAL_STORAGE_CONTAINER_PATTERN =
   "/container-components/local-storage-loader";
+
+// Controlled and Uncontrolled Components Paths
+export const UNCONTROLLED_COMPONENT_PATTERN =
+  "/controlled-uncontrolled-components/uncontrolled";
+export const CONTROLLED_COMPONENT_PATTERN =
+  "/controlled-uncontrolled-components/controlled";
+export const CONTROLLED_MODAL_COMPONENT_PATTERN =
+  "/controlled-uncontrolled-components/controlled-modal";
+export const UNCONTROLLED_FLOWS_COMPONENT_PATTERN =
+  "/controlled-uncontrolled-components/uncontrolled-flows";
+export const COLLECTING_DATA_COMPONENT_PATTERN =
+  "/controlled-uncontrolled-components/collecting-data";
+export const CONTROLLED_FLOWS_COMPONENT_PATTERN =
+  "/controlled-uncontrolled-components/controlled-flows";

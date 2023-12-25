@@ -1,15 +1,60 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
+import React from "react";
 import App from "./App";
-import LayoutComponents from "./routes/LayoutComponents";
-import ContainerComponents from "./routes/ContainerComponents";
-import SplitScreenPattern from "./routes/layout-routes/SplitScreenPattern";
-import ListDisplay from "./routes/layout-routes/ListDisplay";
-import Modal from "./routes/layout-routes/Modal";
-import CCurrentUserLoader from "./routes/container-routes/CCurrentUserLoader";
-import CUserLoader from "./routes/container-routes/CUserLoader";
-import CResourceLoader from "./routes/container-routes/CResourceLoader";
-import CDataSource from "./routes/container-routes/CDataSource";
-import CLocalStorage from "./routes/container-routes/CLocalStorage";
+import lazyComponentLoader from "./utils/lazyComponentLoader";
+
+const LayoutComponents = lazyComponentLoader(
+  () => import("./routes/LayoutComponents")
+);
+const Modal = lazyComponentLoader(() => import("./routes/layout-routes/Modal"));
+const CAndUnComponents = lazyComponentLoader(
+  () => import("./routes/CAndUnComponents")
+);
+
+const SplitScreenPattern = lazyComponentLoader(
+  () => import("./routes/layout-routes/SplitScreenPattern")
+);
+const ListDisplay = lazyComponentLoader(
+  () => import("./routes/layout-routes/ListDisplay")
+);
+
+const ContainerComponents = lazyComponentLoader(
+  () => import("./routes/ContainerComponents")
+);
+const CCurrentUserLoader = lazyComponentLoader(
+  () => import("./routes/container-routes/CCurrentUserLoader")
+);
+const CUserLoader = lazyComponentLoader(
+  () => import("./routes/container-routes/CUserLoader")
+);
+const CResourceLoader = lazyComponentLoader(
+  () => import("./routes/container-routes/CResourceLoader")
+);
+const CDataSource = lazyComponentLoader(
+  () => import("./routes/container-routes/CDataSource")
+);
+const CLocalStorage = lazyComponentLoader(
+  () => import("./routes/container-routes/CLocalStorage")
+);
+
+const CUncontrolled = lazyComponentLoader(
+  () => import("./routes/controlled-uncontrolled-routes/CUncontrolled")
+);
+const CControlled = lazyComponentLoader(
+  () => import("./routes/controlled-uncontrolled-routes/CControlled")
+);
+const CUncontrolledFlows = lazyComponentLoader(
+  () => import("./routes/controlled-uncontrolled-routes/CUncontrolledFlows")
+);
+const CControlledModal = lazyComponentLoader(
+  () => import("./routes/controlled-uncontrolled-routes/CControlledModal")
+);
+const CCollectingData = lazyComponentLoader(
+  () => import("./routes/controlled-uncontrolled-routes/CCollectingData")
+);
+const CControlledFlows = lazyComponentLoader(
+  () => import("./routes/controlled-uncontrolled-routes/CControlledFlows")
+);
 
 const router = createBrowserRouter([
   {
@@ -69,10 +114,33 @@ const router = createBrowserRouter([
     path: "/controlled-uncontrolled-components",
     element: <Outlet />,
     children: [
-      { path: "", element: <h1>Hi</h1> },
       {
-        path: "path",
-        element: <h1>Path</h1>,
+        path: "",
+        element: <CAndUnComponents />,
+      },
+      {
+        path: "uncontrolled",
+        element: <CUncontrolled />,
+      },
+      {
+        path: "controlled",
+        element: <CControlled />,
+      },
+      {
+        path: "controlled-modal",
+        element: <CControlledModal />,
+      },
+      {
+        path: "uncontrolled-flows",
+        element: <CUncontrolledFlows />,
+      },
+      {
+        path: "collecting-data",
+        element: <CCollectingData />,
+      },
+      {
+        path: "controlled-flows",
+        element: <CControlledFlows />,
       },
     ],
   },
