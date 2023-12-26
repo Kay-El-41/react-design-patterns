@@ -46,6 +46,8 @@ export const updateUser = (Component, userId) => {
 // This HOC also post the data we edited.
 // This HOC also reset the editing data.
 // Then pass on to the component.
+// * This HOC is more powerful than the container pattern we studied. The container pattern only pass the data.
+// This HOC can also edit the data.
 
 // * However, this is only restricted to only users.
 // * This is not so generic. During the container patterns, we upgraded that problem into more generic container pattern.

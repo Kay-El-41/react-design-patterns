@@ -3,10 +3,38 @@ import React from "react";
 import App from "./App";
 import lazyComponentLoader from "./utils/lazyComponentLoader";
 
+const CustomHookComponents = lazyComponentLoader(
+  () => import("./routes/CustomHookComponents")
+);
+const CHFetchingUser = lazyComponentLoader(
+  () => import("./routes/custom-hooks/CHFetchingUser")
+);
+const CHFetchingUsers = lazyComponentLoader(
+  () => import("./routes/custom-hooks/CHFetchingUsers")
+);
+const CHFetchingResource = lazyComponentLoader(
+  () => import("./routes/custom-hooks/CHFetchingResource")
+);
+const CHGenericHook = lazyComponentLoader(
+  () => import("./routes/custom-hooks/CHGenericHook")
+);
+
+const FunctionalComponents = lazyComponentLoader(
+  () => import("./routes/FunctionalComponents")
+);
+const FRecursive = lazyComponentLoader(
+  () => import("./routes/functional-programming/FRecursive")
+);
+const FComposition = lazyComponentLoader(
+  () => import("./routes/functional-programming/FComposition")
+);
+const FPartial = lazyComponentLoader(
+  () => import("./routes/functional-programming/FPartial")
+);
+
 const HigherOrderComponents = lazyComponentLoader(
   () => import("./routes/HigherOrderComponents")
 );
-
 const HBuildingForms = lazyComponentLoader(
   () => import("./routes/higher-order-routes/HBuildingForms")
 );
@@ -26,17 +54,13 @@ const HUpdatingData = lazyComponentLoader(
 const LayoutComponents = lazyComponentLoader(
   () => import("./routes/LayoutComponents")
 );
-const Modal = lazyComponentLoader(() => import("./routes/layout-routes/Modal"));
-const CAndUnComponents = lazyComponentLoader(
-  () => import("./routes/CAndUnComponents")
-);
-
 const SplitScreenPattern = lazyComponentLoader(
   () => import("./routes/layout-routes/SplitScreenPattern")
 );
 const ListDisplay = lazyComponentLoader(
   () => import("./routes/layout-routes/ListDisplay")
 );
+const Modal = lazyComponentLoader(() => import("./routes/layout-routes/Modal"));
 
 const ContainerComponents = lazyComponentLoader(
   () => import("./routes/ContainerComponents")
@@ -57,6 +81,9 @@ const CLocalStorage = lazyComponentLoader(
   () => import("./routes/container-routes/CLocalStorage")
 );
 
+const CAndUnComponents = lazyComponentLoader(
+  () => import("./routes/CAndUnComponents")
+);
 const CUncontrolled = lazyComponentLoader(
   () => import("./routes/controlled-uncontrolled-routes/CUncontrolled")
 );
@@ -197,10 +224,22 @@ const router = createBrowserRouter([
     path: "/custom-hooks-components",
     element: <Outlet />,
     children: [
-      { path: "", element: <h1>Hi</h1> },
+      { path: "", element: <CustomHookComponents /> },
       {
-        path: "path",
-        element: <h1>Path</h1>,
+        path: "fetching-user",
+        element: <CHFetchingUser />,
+      },
+      {
+        path: "fetching-users",
+        element: <CHFetchingUsers />,
+      },
+      {
+        path: "fetching-resource",
+        element: <CHFetchingResource />,
+      },
+      {
+        path: "generic-hook",
+        element: <CHGenericHook />,
       },
     ],
   },
@@ -209,10 +248,18 @@ const router = createBrowserRouter([
     path: "/functional-programming-components",
     element: <Outlet />,
     children: [
-      { path: "", element: <h1>Hi</h1> },
+      { path: "", element: <FunctionalComponents /> },
       {
-        path: "path",
-        element: <h1>Path</h1>,
+        path: "recursive",
+        element: <FRecursive />,
+      },
+      {
+        path: "composition",
+        element: <FComposition />,
+      },
+      {
+        path: "partial",
+        element: <FPartial />,
       },
     ],
   },

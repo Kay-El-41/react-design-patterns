@@ -46,3 +46,20 @@ export const UPDATING_DATA_HOC_PATTERN =
 export const BUILDING_FORMS_HOC_PATTERN =
   "/higher-order-components/building-forms";
 export const ENHANCING_HOC_PATTERN = "/higher-order-components/enhancing-hoc";
+
+// Custom Hook Components Paths
+export const FETCHING_USER_HOOK_PATTERN =
+  "/custom-hooks-components/fetching-user";
+export const FETCHING_USERS_HOOK_PATTERN =
+  "/custom-hooks-components/fetching-users";
+export const FETCHING_RESOURCE_HOOK_PATTERN =
+  "/custom-hooks-components/fetching-resource";
+export const GENERIC_HOOK_PATTERN = "/custom-hooks-components/generic-hook";
+
+// Functional Programming in React Components Paths
+export const RECURSIVE_COMPONENT_PATTERN =
+  "/functional-programming-components/recursive";
+export const COMPOSITION_COMPONENT_PATTERN =
+  "/functional-programming-components/composition";
+export const PARTIAL_COMPONENT_PATTERN =
+  "/functional-programming-components/partial";
