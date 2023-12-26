@@ -16,13 +16,13 @@ const CustomHookComponents = () => {
         <h1 className="heading1">Custom Hook Components</h1>
         <h2 className="heading2">Purpose</h2>
         <p className="quote">
-          The Layout Components focus on organizing other components within a
-          web page.
+          Custom Hooks allows us to use the existing React hooks like useState
+          and useEffect, to create our own reusable hooks.
         </p>
         <h2 className="heading2">Concept</h2>
         <p className="quote">
-          The core content of our pages, should be unaware and unconcerned about
-          their precise location withing the page structure.
+          Instead of repeating the same logic across multiple component, we
+          encapsulate the logic into a reusable custom hook.
         </p>
         <h2 className="heading2">Design Patterns</h2>
         <div className="flex flex-col gap-3">
