@@ -72,7 +72,7 @@ app.get("/users/:id", (req, res) => {
 
 app.get("/users", (req, res) => res.json(users));
 
-app.post("/users/:id", (res, req) => {
+app.post("/users/:id", (req, res) => {
   const { id } = req.params;
   const { user: editedUser } = req.body;
 
@@ -86,6 +86,14 @@ app.get("/books", (req, res) => res.json(books));
 app.get("/books/:id", (req, res) => {
   const { id } = req.params;
   console.log(id);
+  res.json(books.find((book) => book.id === id));
+});
+
+app.post("/books/:id", (req, res) => {
+  const { id } = req.params;
+
+  const { book: editedBook } = req.body;
+  books = books.map((book) => (book.id === id ? editedBook : book));
   res.json(books.find((book) => book.id === id));
 });
 
